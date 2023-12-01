@@ -1,18 +1,279 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="3dp"
+    android:layout_marginLeft="1dp"
+    android:layout_marginRight="1dp"
+    android:background="@drawable/main_back"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/output"
+        android:layout_width="362dp"
+        android:layout_height="238dp"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginBottom="2dp"
+        android:gravity="bottom"
+        android:hint="0"
+        android:textAlignment="textEnd"
+        android:textAllCaps="false"
+        android:textColor="@color/ultra_dark"
+        android:textColorHint="@color/ultra_dark"
+        android:textSize="48sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_margin="3dp"
+            android:layout_marginLeft="1dp"
+            android:gravity="bottom|center">
+
+            <Button
+                android:id="@+id/button_cut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ultra_dark_baidu_paw_logo_icon_icons_com_57182"
+                android:textAlignment="center"
+                app:icon="@android:drawable/ic_input_delete"
+                app:iconGravity="textStart"
+                app:iconSize="32dp"
+                app:iconTint="@color/white"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/button_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baidu_paw_logo_icon_icons_com_57182"
+                android:src="@drawable/baidu_paw_logo_icon_icons_com_57182"
+                android:text="C"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/button_ac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baidu_paw_logo_icon_icons_com_57182"
+                android:text="AC"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/button_division"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ultra_dark_baidu_paw_logo_icon_icons_com_57182"
+                android:text="÷"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_margin="3dp"
+            android:layout_marginLeft="1dp"
+            android:gravity="bottom|center">
+
+            <Button
+                android:id="@+id/button_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baidu_paw_logo_icon_icons_com_57182"
+                android:elegantTextHeight="false"
+                android:text="7"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/button_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baidu_paw_logo_icon_icons_com_57182"
+                android:elegantTextHeight="false"
+                android:text="8"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/button_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baidu_paw_logo_icon_icons_com_57182"
+                android:elegantTextHeight="false"
+                android:text="9"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/button_mult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baidu_paw_logo_icon_icons_com_57182"
+                android:elegantTextHeight="false"
+                android:text="x"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_margin="3dp"
+            android:layout_marginLeft="1dp"
+            android:gravity="bottom|center">
+
+            <Button
+                android:id="@+id/button_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baidu_paw_logo_icon_icons_com_57182"
+                android:elegantTextHeight="false"
+                android:text="4"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/button_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baidu_paw_logo_icon_icons_com_57182"
+                android:elegantTextHeight="false"
+                android:text="5"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/button_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baidu_paw_logo_icon_icons_com_57182"
+                android:elegantTextHeight="false"
+                android:text="6"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/button_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baidu_paw_logo_icon_icons_com_57182"
+                android:elegantTextHeight="false"
+                android:text="-"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_margin="3dp"
+            android:layout_marginLeft="1dp"
+            android:gravity="bottom|center">
+
+            <Button
+                android:id="@+id/button_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baidu_paw_logo_icon_icons_com_57182"
+                android:elegantTextHeight="false"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/button_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baidu_paw_logo_icon_icons_com_57182"
+                android:elegantTextHeight="false"
+                android:text="2"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/button_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baidu_paw_logo_icon_icons_com_57182"
+                android:elegantTextHeight="false"
+                android:text="3"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/button_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baidu_paw_logo_icon_icons_com_57182"
+                android:elegantTextHeight="false"
+                android:text="+"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="373dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_0"
+            android:layout_width="173dp"
+            android:layout_height="80dp"
+            android:layout_margin="3dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/dark"
+            android:elegantTextHeight="false"
+            android:gravity="center"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:cornerRadius="30dp"
+            app:strokeColor="@color/ultra_dark"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/button_coma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/baidu_paw_logo_icon_icons_com_57182"
+            android:elegantTextHeight="false"
+            android:text=","
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button_equal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/baidu_paw_logo_icon_icons_com_57182"
+            android:elegantTextHeight="false"
+            android:text="="
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
